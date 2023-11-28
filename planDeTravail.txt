@@ -1,0 +1,55 @@
+pip install django-model-utils // for use Choices
+
+Model :
+
+Info 
+- name
+- description
+- adresse
+- telephone
+- fax
+- email
+- image1
+- image2
+
+Service
+- name
+- designation
+
+
+Subdivision
+- name
+- telephone
+- email
+
+Appel_Offre
+- projet_libellé
+- date_début
+- date_fin
+
+Sector_Activities
+- name
+
+Project
+- intitulé
+- date_début
+- date_fin
+- type ( récent , en cours , cloturé, achevé )
+
+ Project_images
+ - image
+
+Entreprise
+- name
+- logo
+- mobile
+
+Offres_Emploi
+- date_début
+- date_fin
+
+Offres_Emploi_Grade
+- grade
+- description
+- nombre_poste
+

@@ -1,0 +1,909 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">
+<title>DEP de Constantine</title>
+
+<!-- Mobile Specific Metas
+================================================== -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="DEP de Constantine">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name=author content="DEP Constantine">
+<meta name=generator content="Themefisher Constra HTML Template v1.0">
+<!-- Favicon
+================================================== -->
+<link rel="icon" type="image/png" href="{% static 'images/logos/logo2.jpg' %}">
+
+<!-- CSS
+================================================== -->
+<!-- Bootstrap -->
+<link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+<!-- FontAwesome -->
+<link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.min.css' %}">
+<!-- Animation -->
+<link rel="stylesheet" href="{% static 'plugins/animate-css/animate.css' %}">
+<!-- slick Carousel -->
+<link rel="stylesheet" href="{% static 'plugins/slick/slick.css' %}">
+<link rel="stylesheet" href="{% static 'plugins/slick/slick-theme.css' %}">
+<!-- Colorbox -->
+<link rel="stylesheet" href="{% static 'plugins/colorbox/colorbox.css' %}">
+<!-- Template styles-->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+  
+  <!-- Topbar start -->
+
+  <div id="top-bar" class="top-bar bg-dark" >
+  </div>
+    
+  <!--/ Topbar end -->
+ 
+  <!-- Header start -->
+<header id="header" class="header-one " >
+  <div class="bg-white">
+    <div class="container logo-area">
+      <div class="row align-items-center">
+            <div class="logo col-lg-2 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                <img  src="{% static 'images/logos/logodepconstantine.png' %}" alt="Image DEP">
+            </div><!-- logo end -->
+            <div class="col-lg-8 text-center">
+                <h2 >الجمهورية الجزائرية الديمقراطية الشعبية</h2>
+                <h3  >وزارة السكن و العمران و المدينة </h3>
+                  
+            </div><!-- header right end -->
+            <div class="col-lg-2 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                <img src="{% static 'images/icon-image/Drapeau.gif' %}"  class="card-img" alt="drapeau" style=" width:200px; height: 100px;">
+            </div>
+
+      </div><!-- logo area end -->
+    </div><!-- Container end -->
+  
+  </div>
+
+  <!--Navigation -->
+  <div class="site-navigation">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="navbar-collapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav mr-auto">
+                      <li class="nav-item dropdown active">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DEP <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+
+                            <li class="active"><a href="">Direction</a></li>                     
+                            <li><a href="#id-services">Services</a></li>
+                            <li><a href="#id-subdivisions">Subdivisions</a></li>
+                          
+                          </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projets <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#id-programme">Programme actuel</a></li>
+                            <li><a href="#id-projets-achevés">Projets achevés</a></li>
+                            <li><a href="#id-projets-récents">Projets récents</a></li>
+                          </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Appels d'offres <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#appels-offres">Appels d'offres</a></li>
+                            <li><a href="404.html">Consultations</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Autres</a>
+                                <ul class="dropdown-menu">
+
+                                  <li><a href="#!">Gré à Gré</a></li>
+                                  <li><a href="#!">-----</a></li>
+                                  <li><a href="#!">-----</a></li>
+
+                                </ul>
+                            </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ETP & BET <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+
+                            <li><a href="#etp-bet">Entreprises</a></li>
+                            <li><a href="#etp-bet">Buraux d'Etudes</a></li>
+                            <li><a href="news-single.html">Autres</a></li>
+                            
+                          </ul>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="#id-offres-emploi">Offres d'emploi</a></li>
+
+                      <li class="nav-item"><a class="nav-link" href="#id-contact-us">contact</a></li>
+                    </ul>
+                </div>
+              </nav>
+          </div>
+          <!--/ Col end -->
+        </div>
+        <!--/ Row end -->
+
+        <div class="nav-search">
+          <span id="search"><i class="fa fa-search"></i></span>
+        </div><!-- Search end -->
+
+        <div class="search-block" style="display: none;">
+          <label for="search-field" class="w-100 mb-0">
+            <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter">
+          </label>
+          <span class="search-close">&times;</span>
+        </div><!-- Site search end -->
+    </div>
+    <!--/ Container end -->
+
+  </div>
+  <!--/ Navigation end -->
+
+</header>
+
+  <!-- Image d'accueil --> 
+   
+  <div class="banner-carousel banner-carousel-1 mb-0">
+ 
+    <div class="banner-carousel-item" style = "background-image: url({% static 'images/Direction2.png' %});">
+     <div class="slider-content">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-md-12 text-center">
+                  <h3 class="slide-sub-title" data-animation-in="slideInRight">{{infos.name}}</h3>
+                  <h2 class="slide-title" data-animation-in="slideInLeft">{{infos.libellé}} </h2>
+                 
+                  <p data-animation-in="slideInLeft" data-duration-in="1.2">
+                      <a href="#id-programme" class="slider btn btn-primary">Nos Projets</a>
+                      <a href="contact.html" class="slider btn btn-primary border">Contactez-nous</a>
+                  </p>
+
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  
+    <div class="banner-carousel-item" style = "background-image: url({% static 'images/Direction2.png' %});">
+      <div class="slider-content text-right">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-md-12">                 
+                  <h3 class="slide-sub-title" data-animation-in="slideInLeft">مديرية التجهيزات العمومية</h3>
+                  <h3 class="slide-title" data-animation-in="fadeIn">ولاية قسنطينة</h3>
+
+                  <p data-animation-in="slideInLeft" data-duration-in="1.2">
+                    <a href="#id-programme" class="slider btn btn-primary">إكتشف مشاريعنا</a>
+                    <a href="contact.html" class="slider btn btn-primary border">إتصل بنا</a>
+                  </p>
+                  
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+  <!--
+    <div class="banner-carousel-item" style="background-image:url(images/slider-main/bg2.jpg)">
+      <div class="slider-content text-left">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-md-12">
+                  <h2 class="slide-title-box" data-animation-in="slideInDown">Projets</h2>
+                  <h3 class="slide-title" data-animation-in="fadeIn">Quand le service compte</h3>
+                  <h3 class="slide-sub-title" data-animation-in="slideInLeft">Projets en cours</h3>
+                  <p data-animation-in="slideInRight">
+                      <a href="services.html" class="slider btn btn-primary border">Voir les projets</a>
+                  </p>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  
+    <div class="banner-carousel-item" style="background-image:url(images/slider-main/bg3.jpg)">
+      <div class="slider-content text-right">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-md-12">
+                  <h2 class="slide-title" data-animation-in="slideInDown">Rencontrez nos ingénieurs</h2>
+                  <h3 class="slide-sub-title" data-animation-in="fadeIn">Nous croyons que la durabilité</h3>
+                  <p class="slider-description lead" data-animation-in="slideInRight">Personnel qualifié pour un travail professionnel.</p>
+                  <div data-animation-in="slideInLeft">
+                      <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">Nos ingénieurs</a>
+                      <a href="about.html" class="slider btn btn-primary border" aria-label="learn-more-about-us">Learn more</a>
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+-->
+  </div>
+  <section class="call-to-action-box no-padding">
+      <div class="container">
+        <div class="action-style-box">
+            <div class="row align-items-center">
+             
+                  <div class="row text-dark">
+
+                    <div class=" col-lg-12 text-center text-lg-left mb-2 mb-md-5 mb-lg-0">
+    
+                      <ul class="top-info-box">
+                        <li>
+                          <div class="info-box">
+                            <div class="info-box-content">
+                         
+                              <ul class="top-info text-center text-md-left">
+                                <li><i class="fas fa-map-marker-alt"></i> <p class="info-text">{{ infos.adresse }}</p></li>
+                                <li>
+                                  <i class="fas fa-phone"></i>
+                                  <p class="info-text">{{ infos.telephone }}</p>
+                                </li>
+                                <li>
+                                  <i class="fas fa-fax"></i>
+                                  <p class="info-text">{{ infos.fax }}</p>
+                                </li>
+                                <li>
+                                  <i class="fas fa-mail"></i>
+                                  <p class="info-text">{{ infos.email }}</p>
+                                </li>
+                              </ul>
+                   
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+              
+                  </div><!-- row end -->
+              </div><!-- Action style box -->
+        </div><!-- Container end -->
+      </div>
+  </section><!-- Action end -->
+
+  <!-- / Image d'accueil --> 
+
+  <!--/ Header end -->
+
+  <!--Directeur-->
+  <section id="id-Directeur" >
+    <div class="container px-2 py-4 ">
+      <div class="row g-0">
+        <div class="col-lg-4 ">
+          {% if infos.directeurImage %} 
+            <img src="{{ infos.directeurImage.url }}" class="img-fluid rounded-circle" alt="..." />
+          {% else %}
+             <img src="{% static 'images/personnel/directeur/1.jpg' %}" class="img-fluid rounded-circle" alt="..." />
+          {% endif %}
+        </div>
+        <div class="col-lg-8 text-left">
+          <h3>Directeur de la DEP</h3>
+          <h5> {{ infos.directeur }}</h5>
+          <p> {{ infos.directeurInformations }}</p>
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+  <!-- / Directeur-->
+
+  <!--Services-->
+  <section id="id-services" class="facts-area  p-0">
+    <div class="container  text-center" >
+      <h2 class="pb-2 border-bottom ">Services de la DEP</h2>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+        {% for service in services %}
+        <div class="col d-flex align-items-center">
+          <div>
+              <h3 class="service-box-title"><a href="#">{{service.name}}</a></h3>
+              {% if service.photo %} 
+                <img src="{{ service.photo.url }}" class="img-fluid rounded-circle" alt="..." />
+              {% else %}   
+                <img src="{% static 'images/personnel/chefs-services/sam.jpg' %}" class="img-fluid rounded-circle" width="150px" height="150px" alt="..." />
+              {% endif %}
+              <p>{{service.chefService}}</p>
+              <h5 class="card-text">{{service.description}}</h5>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!-- / Services-->
+
+  <!-- Subdivisions-->
+  <section id="id-subdivisions" class="facts-area ">
+    <div class="container px-2 py-5 text-center " id="icon-grid">
+       <h2 class="pb-2 " >Subdivisions de la DEP</h2>
+        <div class="row">
+          {% for sub in subdivisions %}
+            <div class="col-sm-6 col-md-4 col-lg-4 ">
+
+              <div class="card m-2">
+                <div class="card-header text-center">{{sub.name}}</div>
+                <div class="row">
+                 <div class="col-3">
+                  <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+
+                    <img src="{% static 'images/Subdivisions/sub1.png' %}" class="img-fluid p-2" alt="..." />   
+                    
+                  </div>
+                  </div>
+                  <div class="card-body col-9">
+                    <h5 class="card-title">{{sub.chefSubdivision}}</h5>
+                    <p class="card-text">Tel : {{sub.telephone}}</p>
+                    <p class="card-text">{{sub.email}}</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          {% endfor %}
+      </div> 
+    </div>
+  </section>
+  <!-- / Subdivisions-->
+
+  <!-- Appels offres--> 
+  <section id="appels-offres" class="subscribe">
+    <div class="text-center p-4">   
+        <h2 >Appels d'offres</h2>
+    </div>
+  </section>
+    <div class="container">
+      <div class="row">
+        {% for appelsOffre in appelsOffres %}
+          <div class="col-6">  
+            <div class="card-header">
+              {{ appelsOffre.type }}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"> {{appelsOffre.projet}}</h5>
+              <p class="card-text">Du <strong> {{appelsOffre.date_début}} </strong>  Au  <strong> {{appelsOffre.date_fin}} </strong></p>
+              <a href="#" class="btn btn-primary">Détails</a>
+            </div>
+          </div>
+        {% endfor %}
+
+    </div>
+    </div>
+  <!-- / Appels offres-->
+  
+<!-- PROGRAMME DES EQUIPEMENTS PUBLICS-->
+
+  <div id="id-programme" class="container px-2 py-3 text-center" >    
+    <div class="row text-center">
+        <div class="col-12">
+          <h2 >PROGRAMME DES EQUIPEMENTS PUBLICS</h2>
+          <p >La Direction Des Équipements Publics de la wilaya de Constantine </p>
+          <p > gère 284 opérations inscrite dont 164 projets 
+            réparties sur divers secteurs.</p>
+          </p>
+        </div>
+    </div>
+  </div>
+  
+<!-- Statistiques-->
+  <section id="facts" class="facts-area dark-bg p-4">
+      <div class="container">
+        <div class="facts-wrapper">
+            <div class="row ">
+              <div class="col-md-3 col-sm-6 ts-facts text-center">
+                  <div class="ts-facts-img m-1">
+                    <img loading="lazy" src="{% static 'images/icon-image/fact1.png' %}" alt="facts-img">
+                  </div>
+                  <div class="ts-facts-content">
+                    <h2 class="ts-facts-num "><span class="counterUp" data-count="284">284</span></h2>
+                    <h3 class="ts-facts-title">Opérations inscrite</h3>
+                  </div>
+              </div><!-- Col end -->
+
+              <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0 text-center">
+                <div class="ts-facts-img m-1 ">
+                  <img loading="lazy" src="{% static 'images/icon-image/fact3.png' %}" alt="facts-img">
+                </div>
+                <div class="ts-facts-content">
+                  <h2 class="ts-facts-num "><span class="counterUp" data-count="164">164</span></h2>
+                  <h3 class="ts-facts-title">Projets</h3>
+                </div>
+              </div><!-- Col end -->
+              <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0 text-center">
+                  <div class="ts-facts-img m-1">
+                    <img loading="lazy" src="{% static 'images/icon-image/fact4.png' %}" alt="facts-img">
+                  </div>
+                  <div class="ts-facts-content ">
+                    <h2 class="ts-facts-num "><span class="counterUp" data-count="10">10</span></h2>
+                    <h3 class="ts-facts-title">Secteurs</h3>
+                  </div>
+              </div><!-- Col end -->
+              <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0 text-center">
+                  <div class="ts-facts-img m-1 ">
+                    <img loading="lazy" src="{% static 'images/icon-image/fact2.png' %}" alt="facts-img">
+                  </div>
+                  <div class="ts-facts-content">
+                    <h2 class="ts-facts-num "><span class="counterUp" data-count="187">187</span></h2>
+                    <h3 class="ts-facts-title">Personnel</h3>
+                  </div>
+              </div><!-- Col end -->
+    
+            </div> <!-- Facts end -->
+        </div>
+        <!--/ Content row end -->
+      </div>
+      <!--/ Container end -->
+  </section>
+<!-- / Statistiques-->
+
+<!-- Secteurs d'activités-->
+    <section id="ts-service-area" class="ts-service-area pb-4 pt-2">
+      <div class="container px-2 py-3 " id="icon-grid">
+        <div class="row text-center">
+            <div class="col-12 pb-3">
+              <h2  >SECTEURS D'ACTIVITES</h2>
+            </div>
+        </div>
+        <!--/ Title row end -->
+    
+        <div class="row">
+          <div class="col-lg-4">
+            {% for secteur in secteursActivités %}
+              {% if not secteur.afficherDroite %}
+              <div class="ts-service-box d-flex">
+                  <div class="ts-service-box-img">
+                    <img loading="lazy" src="{{ secteur.image.url }}" alt="service-icon">
+                  </div>
+                  <div class="ts-service-box-info ">
+                    <h3 class="service-box-title"><a href="#">{{ secteur.name }}</a></h3>
+                    <p>{{ secteur.nombreProjets }} projet(s) </p>
+                  </div>
+              </div><!-- Service 1 end -->
+              {% endif %}
+            {% endfor %}
+          </div><!-- Col end -->
+
+          <div class="col-lg-4 text-center">
+              <img loading="lazy" class="img-fluid" src="{% static 'images/services/service-center.jpg' %}" alt="service-avater-image">
+          </div><!-- Col end -->
+    
+          <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
+            {% for secteur in secteursActivités %}
+              {% if secteur.afficherDroite %}
+              <div class="ts-service-box d-flex">
+                  <div class="ts-service-box-img">
+                    <img loading="lazy" src="{{ secteur.image.url }}" alt="service-icon">
+                  </div>
+                  <div class="ts-service-box-info">
+                    <h3 class="service-box-title"><a href="#">{{ secteur.name }}</a></h3>
+                    <p>{{ secteur.nombreProjets }} projet(s)</p>
+                  </div>
+              </div><!-- Service 6 end -->
+              {% endif %}
+            {% endfor %}
+          </div><!-- Col end -->
+
+            
+        </div><!-- Content row end -->
+
+        <div class="row text-center ">
+          <div class="col-12">
+           <a href="#" class="btn btn-primary">Détails</a>
+          </div>
+        </div>
+      </div><!--/ Container end -->
+      
+    </section>
+<!-- / Secteurs-->
+<!-- / PROGRAMME DES EQUIPEMENTS PUBLICS-->
+
+<!-- PROJETS ACHEVES-->
+    <section id="id-projets-achevés" class="project-area solid-bg">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <h2 class="section-title">TRAVAIL D'EXCELLENCE</h2>
+            <h3 class="section-sub-title">PROJETS ACHEVES</h3>
+          </div>
+        </div>
+        <!--/ Title row end -->
+    
+        <div class="row">
+          <div class="col-12">
+            <div class="shuffle-btn-group">
+              <label class="" for="all">
+                <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Tous
+              </label>
+              {% for secteur in secteursActivités %}
+                <!-- <label for="{{ secteur.name }}"> -->
+                  <!-- <a href="{{ secteur.name }}"> {{ secteur.name }} </a> -->
+                  <a href="{{ secteur.name }}"> 
+                     <input type="radio" name="shuffle-filter" id="{{ secteur.name }}" value="{{ secteur.name }}">{{ secteur.name }}
+                  </a>   
+                <!-- </label> -->
+              {% endfor %}
+            </div><!-- project filter end -->
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for projet in projets %}
+              {% if projet.état == "Achevé" %}
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="{{ projet.image.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ projet.libellé }}</h5>
+                      <p class="card-text"> {{ projet.description }}</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+            </div>
+          <div class="col-12">
+            <div class="general-btn text-center">
+              <a class="btn btn-primary" href="projects.html">Voir tous les projets</a>
+            </div>
+          </div>
+    
+        </div><!-- Content row end -->
+      </div>
+      <!--/ Container end -->
+    </section>
+  <!-- / PROJETS ACHEVES-->
+
+
+
+
+
+
+
+  <!-- Entreprises et BET-->
+  <section id="etp-bet" class="content">
+  <div class="container text-center">
+    <div class="row">
+        <div class="col-lg-12 mt-5 mt-lg-0">
+
+          <h3 class="column-title">Entreprises et BET </h3>
+
+          <div class="row all-clients">
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client1.png' %}" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 1 end -->
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client2.png' %}" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 2 end -->
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client3.png' %}" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 3 end -->
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="../images/clients/client4.png" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 4 end -->
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client5.png' %}" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 5 end -->
+
+              <div class="col-sm-4 col-6">
+                <figure class="clients-logo">
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client6.png' %}" alt="clients-logo" /></a>
+                </figure>
+              </div><!-- Client 6 end -->
+
+          </div><!-- Clients row end -->
+
+        </div><!-- Col end -->
+    </div>
+    <!--/ Content row end -->
+  </div>
+  <!--/ Container end -->
+  </section>
+  <!-- / Entreprises et BET end -->
+
+  <!-- subscribe -->
+  <section class="subscribe no-padding">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+          <div class="subscribe-call-to-acton">
+              <h3>Pouvons-nous aider ?</h3>
+              <h4>+213 31 75 32 28</h4>
+          </div>
+        </div><!-- Col end -->
+
+        <div class="col-lg-8">
+          <div class="ts-newsletter row align-items-center">
+              <div class="col-md-5 newsletter-introtext">
+                <h4 class="text-white mb-0">inscrivez à notre espace</h4>
+                <p class="text-white">DEP de constantine </p>
+              </div>
+
+              <div class="col-md-7 newsletter-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                      <label for="newsletter-email" class="content-hidden">Newsletter Email</label>
+                      <input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Entrer votre email puis tapez entrer" autocomplete="off">
+                    </div>
+                </form>
+              </div>
+          </div><!-- Newsletter end -->
+        </div><!-- Col end -->
+
+    </div><!-- Content row end -->
+  </div>
+  <!--/ Container end -->
+  </section>
+  <!--/ subscribe end -->
+
+  <!-- PROJETS RÉCENTS -->
+  <section id="id-projets-récents" class="news">
+  <div class="container">
+    <div class="row text-center">
+        <div class="col-12">
+          <h2 class="section-title">Travailler avec dinité</h2>
+          <h3 class="section-sub-title">PROJETS RÉCENTS </h3>
+        </div>
+    </div>
+    <!--/ Title row end -->
+
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="news-single.html" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="{% static 'images/projets/projetsrécents/1.jpg' %}" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                    <a href="news-single.html" class="d-inline-block"> Etude et réalisation d'un célibatorum (R+4) au profit de la sureté national à la nouvelle ville ALI MENDJELI
+                    </a>
+                </h4>
+                <div class="latest-post-meta">
+                    <span class="post-item-date">
+                      <i class="fa fa-clock-o"></i> July 20, 2017
+                    </span>
+                </div>
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 1st post col end -->
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="news-single.html" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="{% static 'images/projets/projetsrécents/2.jpg' %}" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                    <a href="news-single.html" class="d-inline-block">Thandler Airport Water Reclamation Facility Expansion Project Named</a>
+                </h4>
+                <div class="latest-post-meta">
+                    <span class="post-item-date">
+                      <i class="fa fa-clock-o"></i> June 17, 2017
+                    </span>
+                </div>
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 2nd post col end -->
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="latest-post">
+              <div class="latest-post-media">
+                <a href="news-single.html" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="{% static 'images/projets/projetsrécents/4.jpg' %}" alt="img">
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                    <a href="news-single.html" class="d-inline-block">Réalisation d'une Unité Républicaine de Sécurité (URS)à nouvelle   ville Ali Mendjeli UV01 Khroub Cnee </a>
+                </h4>
+                <div class="latest-post-meta">
+                    <span class="post-item-date">
+                      <i class="fa fa-clock-o"></i> Aug 13, 2017
+                    </span>
+                </div>
+              </div>
+          </div><!-- Latest post end -->
+        </div><!-- 3rd post col end -->
+    </div>
+    <!--/ Content row end -->
+
+    <div class="general-btn text-center mt-4">
+        <a class="btn btn-primary" href="news-left-sidebar.html">Voire  tous les projets</a>
+    </div>
+
+  </div>
+  <!--/ Container end -->
+  </section>
+  <!--/ PROJETS RÉCENTS end -->
+
+  <!-- offres d'emploi-->
+  <section id="id-offres-emploi" class="content">
+    <div class="container ">
+      <div class="row">
+          <div class="col-lg-12 mt-5 mt-lg-0">
+  
+          <h3 class="column-title text-center">offres d'emploi </h3>
+          <p class="card-text text-center">Date du 01/01/2022 au 15/01/2022</p>
+          
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Architecte</h5>
+                  <p class="card-text">03 postes </p>
+                  <a href="#" class="btn btn-primary">Détails</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Technicien en bâtiment</h5>
+                  <p class="card-text">05 postes </p>
+                  <a href="#" class="btn btn-primary">Détails</a>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+  
+          </div><!-- Col end -->
+      </div>
+      <!--/ Content row end -->
+    </div>
+    <!--/ Container end -->
+  </section>
+  <!-- / offres d'emploi end -->
+
+  <!-- Footer-->
+  <footer id="footer" class="footer bg-overlay">
+    <div class="footer-main">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-4 col-md-6 footer-widget footer-about">
+            <h3 class="widget-title">À PROPOS DE NOUS </h3>
+            <img loading="lazy" width="200px" class="footer-logo" src="{% static 'images/logos/footer-logo.jpg' %}" alt="Constra">
+            <p>Direction des Equipement Publics</p>
+            <p >Wilaya de Constantine</p>
+            <div class="footer-social">
+              <ul>
+                <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
+                      class="fab fa-facebook-f"></i></a>
+                </li>
+                <!--
+                <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
+                      class="fab fa-instagram"></i></a></li>
+                <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
+                -->
+              </ul>
+            </div><!-- Footer social end -->
+          </div><!-- Col end -->
+
+          <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+            <h3 class="widget-title">Horraires de travail </h3>
+            <div class="working-hours">
+              Nous travaillons 5 jours sur 7. 
+              <br><br> Dimanche - Jeudi: <span class="text-right">08:00 - 16:30 </span>
+              <br> Vendredi et Samedi : <span class="text-right">Weekend</span>
+             
+            </div>
+          </div><!-- Col end -->
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
+            <h3 class="widget-title">Services</h3>
+            <ul class="list-arrow">
+
+              <li><a href="service-single.html">Service SAM</a></li>
+              <li><a href="service-single.html">Service d'Etude</a></li>
+              <li><a href="service-single.html">Service des Marchés Publics</a></li>
+              <li><a href="service-single.html">Service de Suivi</a></li>
+             
+            </ul>
+          </div><!-- Col end -->
+        </div><!-- Row end -->
+      </div><!-- Container end -->
+    </div><!-- Footer main end -->
+
+    <div class="copyright">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="copyright-info">
+              <span>Copyright &copy; <script>
+                  document.write(new Date().getFullYear())
+                </script>, Designed &amp; Developed by <a href="https://dep25cellule.com">Cellule Informatique - DEP de Constantine</a></span>
+            </div>
+          </div>
+          <!--
+          <div class="col-md-6">
+            <div class="footer-menu text-center text-md-right">
+              <ul class="list-unstyled">
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Our people</a></li>
+                <li><a href="faq.html">Faq</a></li>
+                <li><a href="news-left-sidebar.html">Blog</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+          -->
+        </div><!-- Row end -->
+
+        <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+          <button class="btn btn-primary" title="Back to Top">
+            <i class="fa fa-angle-double-up"></i>
+          </button>
+        </div>
+
+      </div><!-- Container end -->
+    </div><!-- Copyright end -->
+  </footer>
+  <!-- Footer end -->
+
+
+
+<!-- Javascript Files
+  ================================================== -->
+
+  <!-- initialize jQuery Library -->
+  <script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+  <!-- Bootstrap jQuery -->
+  <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}" defer></script>
+  <!-- Slick Carousel -->
+  <script src="{% static 'plugins/slick/slick.min.js' %}"></script>
+  <script src="{% static 'plugins/slick/slick-animation.min.js' %}"></script>
+  <!-- Color box -->
+  <script src="{% static 'plugins/colorbox/jquery.colorbox.js' %}"></script>
+  <!-- shuffle -->
+  <script src="{% static 'plugins/shuffle/shuffle.min.js' %}" defer></script>
+
+
+  <!-- Google Map API Key-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+  <!-- Google Map Plugin-->
+  <script src="{% static 'plugins/google-map/map.js' %}" defer></script>
+
+  <!-- Template custom -->
+  <script src="{% static 'js/script.js' %}"></script>
+
+  </div><!-- Body inner end -->
+  
+  </body>
+
+  </html>
