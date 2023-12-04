@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-uw9tszg3l)gq@5xsw4c3t3otrdl=28bjq+n+$sb!yv%u76&k*i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True #False
 
-ALLOWED_HOSTS = ['dep25.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1','dep25.onrender.com']
 
 
 # Application definition
@@ -117,17 +117,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
-STATIC_DIR = os.path.join (BASE_DIR, "static")
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Extra places for collectstatic to find static files.
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+# Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'project/static'),
 ]
-
+# and tap python manage.py collectstatic
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
