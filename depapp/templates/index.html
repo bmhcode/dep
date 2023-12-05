@@ -570,12 +570,6 @@
     </section>
   <!-- / PROJETS ACHEVES-->
 
-
-
-
-
-
-
   <!-- Entreprises et BET-->
   <section id="etp-bet" class="content">
   <div class="container text-center">
@@ -678,18 +672,20 @@
     <!--/ Title row end -->
 
     <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4">
+      {% for projet in projets %}
+        {% if projet.état == "Récent" %}
+          <div class="col-lg-4 col-md-6 mb-4">
           <div class="latest-post">
               <div class="latest-post-media">
+                <h4 >{{ projet.libellé }}</h4>
                 <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="{% static 'images/projets/projetsrécents/1.jpg' %}" alt="img">
+                    <img loading="lazy" class="img-fluid" src="{{ projet.image.url }}"alt="img">
                 </a>
               </div>
               <div class="post-body">
-                <h4 class="post-title">
-                    <a href="news-single.html" class="d-inline-block"> Etude et réalisation d'un célibatorum (R+4) au profit de la sureté national à la nouvelle ville ALI MENDJELI
-                    </a>
-                </h4>
+                <h5 class="post-title">
+                    <a href="news-single.html" class="d-inline-block"> {{ projet.description }} </a>
+                </h5>
                 <div class="latest-post-meta">
                     <span class="post-item-date">
                       <i class="fa fa-clock-o"></i> July 20, 2017
@@ -697,47 +693,10 @@
                 </div>
               </div>
           </div><!-- Latest post end -->
-        </div><!-- 1st post col end -->
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="latest-post">
-              <div class="latest-post-media">
-                <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="{% static 'images/projets/projetsrécents/2.jpg' %}" alt="img">
-                </a>
-              </div>
-              <div class="post-body">
-                <h4 class="post-title">
-                    <a href="news-single.html" class="d-inline-block">Thandler Airport Water Reclamation Facility Expansion Project Named</a>
-                </h4>
-                <div class="latest-post-meta">
-                    <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> June 17, 2017
-                    </span>
-                </div>
-              </div>
-          </div><!-- Latest post end -->
-        </div><!-- 2nd post col end -->
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="latest-post">
-              <div class="latest-post-media">
-                <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="{% static 'images/projets/projetsrécents/4.jpg' %}" alt="img">
-                </a>
-              </div>
-              <div class="post-body">
-                <h4 class="post-title">
-                    <a href="news-single.html" class="d-inline-block">Réalisation d'une Unité Républicaine de Sécurité (URS)à nouvelle   ville Ali Mendjeli UV01 Khroub Cnee </a>
-                </h4>
-                <div class="latest-post-meta">
-                    <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> Aug 13, 2017
-                    </span>
-                </div>
-              </div>
-          </div><!-- Latest post end -->
-        </div><!-- 3rd post col end -->
+          </div><!-- 1st post col end -->
+        {% endif %}
+      {% endfor %}
+     
     </div>
     <!--/ Content row end -->
 
@@ -801,8 +760,8 @@
             <p >Wilaya de Constantine</p>
             <div class="footer-social">
               <ul>
-                <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
-                      class="fab fa-facebook-f"></i></a>
+                <li><a href="https://facebook.com/مديرية التجهيزات العمومية لولاية قسنطينة" aria-label="Facebook"><i
+                      class="fab fa-facebook-f"></i>مديرية التجهيزات العمومية لولاية قسنطينة</a>
                 </li>
                 <!--
                 <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
