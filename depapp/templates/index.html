@@ -368,23 +368,27 @@
         <h2 >Appels d'offres</h2>
     </div>
   </section>
+<br>
     <div class="container">
       <div class="row">
         {% for appelsOffre in appelsOffres %}
-          <div class="col-6">  
-            <div class="card-header">
-              {{ appelsOffre.type }}
+          {% if appelsOffre.afficher %}
+            <div class="col-6">  
+              <div class="card-header">
+                {{ appelsOffre.type }}
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"> {{appelsOffre.projet}}</h5>
+                <p class="card-text">Du <strong> {{appelsOffre.date_début}} </strong>  Au  <strong> {{appelsOffre.date_fin}} </strong></p>
+                <a href="#" class="btn btn-primary">Détails</a>
+              </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title"> {{appelsOffre.projet}}</h5>
-              <p class="card-text">Du <strong> {{appelsOffre.date_début}} </strong>  Au  <strong> {{appelsOffre.date_fin}} </strong></p>
-              <a href="#" class="btn btn-primary">Détails</a>
-            </div>
-          </div>
+          {% endif %}
         {% endfor %}
 
     </div>
     </div>
+    
   <!-- / Appels offres-->
   
 <!-- PROGRAMME DES EQUIPEMENTS PUBLICS-->
@@ -532,17 +536,17 @@
               </label>
               {% for secteur in secteursActivités %}
                 <!-- <label for="{{ secteur.name }}"> -->
-                  <!-- <a href="{{ secteur.name }}"> {{ secteur.name }} </a> -->
-                  <a href="{{ secteur.name }}"> 
-                     <input type="radio" name="shuffle-filter" id="{{ secteur.name }}" value="{{ secteur.name }}">{{ secteur.name }}
-                  </a>   
+                  <button type="button" class="btn btn-outline-warning">
+                    <a href="{{ secteur.name }}" id="{{ secteur.name }}" value="{{ secteur.name }}"> 
+                        {{ secteur.name }}
+                    </a> 
+                  </button>
                 <!-- </label> -->
               {% endfor %}
             </div><!-- project filter end -->
-
             <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for projet in projets %}
-              {% if projet.état == "Achevé" %}
+              {% if projet.état == "Achevé" and projet.afficher %}
                 <div class="col">
                   <div class="card h-100">
                     <img src="{{ projet.image.url }}" class="card-img-top" alt="...">
@@ -551,7 +555,7 @@
                       <p class="card-text"> {{ projet.description }}</p>
                     </div>
                     <div class="card-footer">
-                      <small class="text-body-secondary">Last updated 3 mins ago</small>
+                      <small class="text-body-secondary">{{projet.date_fin_traveaux}}</small>
                     </div>
                   </div>
                 </div>
@@ -673,7 +677,7 @@
 
     <div class="row">
       {% for projet in projets %}
-        {% if projet.état == "Récent" %}
+        {% if projet.état == "Récent" and projet.afficher %}
           <div class="col-lg-4 col-md-6 mb-4">
           <div class="latest-post">
               <div class="latest-post-media">
@@ -688,7 +692,7 @@
                 </h5>
                 <div class="latest-post-meta">
                     <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> July 20, 2017
+                      <i class="fa fa-clock-o"></i> {{ projet.date_début_traveaux }}
                     </span>
                 </div>
               </div>
@@ -717,29 +721,23 @@
   
           <h3 class="column-title text-center">offres d'emploi </h3>
           <p class="card-text text-center">Date du 01/01/2022 au 15/01/2022</p>
-          
           <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Architecte</h5>
-                  <p class="card-text">03 postes </p>
-                  <a href="#" class="btn btn-primary">Détails</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Technicien en bâtiment</h5>
-                  <p class="card-text">05 postes </p>
-                  <a href="#" class="btn btn-primary">Détails</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% for offreEmploi in OffresEmplois %}
+            {% if offreEmploi.afficher %}  
             
-  
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ offreEmploi.libellé }} {{ offreEmploi.nombre_poste }} Poste(s) </h5>
+                      <p class="card-text">{{ offreEmploi.description }} </p>
+                      <a href="#" class="btn btn-primary">Détails</a>
+                    </div>
+                  </div>
+                </div>
+             
+            {% endif %}
+          {% endfor %}
+
           </div><!-- Col end -->
       </div>
       <!--/ Content row end -->

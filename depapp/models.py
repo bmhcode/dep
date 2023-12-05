@@ -57,7 +57,7 @@ class AppelsOffre(models.Model):
     projet = models.TextField()
     date_début = models.DateField(blank=True, null=True )
     date_fin = models.DateField(blank=True, null=True )
-   
+    afficher = models.BooleanField(default=False)
     def __str__(self):
         return self.type
 
@@ -69,7 +69,7 @@ class Entreprise(models.Model):
     contact   = models.CharField(max_length = 50, blank=True, null=True )
     mobile    = models.CharField(max_length = 30,blank=True, null=True )
     observation = models.TextField(blank=True, null=True )
-    active = models.BooleanField(default=True)
+    active = models.BooleanField(default=False)
 
 class Bet(models.Model):
     name      = models.CharField(max_length=100) 
@@ -79,7 +79,7 @@ class Bet(models.Model):
     contact   = models.CharField(max_length=50, blank=True, null=True )
     mobile    = models.CharField(max_length=30,blank=True, null=True )
     observation = models.TextField(blank=True, null=True )
-    active = models.BooleanField(default=True)
+    active = models.BooleanField(default=False)
 
 
 class SecteurActivité(models.Model):
@@ -104,7 +104,10 @@ class Projet(models.Model):
     secteur = models.ForeignKey(SecteurActivité,related_name="Secteurs",on_delete=models.CASCADE, verbose_name="Secteur d'activité")
     image   = models.ImageField(upload_to='Projets/', blank=True, null=False)
     description = models.TextField(blank=True, null=True )
-    afficher    = models.BooleanField(default=True)
+    date_début_traveaux = models.DateField(blank=True, null=True )
+    date_fin_traveaux = models.DateField(blank=True, null=True )
+
+    afficher    = models.BooleanField(default=False)
 
     def __str__(self):
         return self.libellé
@@ -119,3 +122,14 @@ class ProjetImages(models.Model):
     #     return self.name
     # class Meta:
     #     verbose_plurial_name = "Images du projet"
+
+class OffreEmploi(models.Model):
+    libellé     = models.CharField("Libellé du projet", max_length=100, blank=False, null=False )
+    nombre_poste= models.PositiveIntegerField(default=1, blank=True, null=True )
+    description = models.TextField(blank=True, null=True )
+    date_début  = models.DateField(blank=True, null=True )
+    date_fin    = models.DateField(blank=True, null=True )
+    afficher    = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.libellé
