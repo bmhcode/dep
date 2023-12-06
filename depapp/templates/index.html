@@ -159,7 +159,7 @@
    
   <div class="banner-carousel banner-carousel-1 mb-0">
  
-    <div class="banner-carousel-item" style = "background-image: url({% static 'images/Direction2.png' %});">
+    <div class="banner-carousel-item" style = "background-image: url({% static 'images/Direction2.png' %})">
      <div class="slider-content">
           <div class="container h-100">
             <div class="row align-items-center h-100">
@@ -178,7 +178,7 @@
       </div>
     </div>
   
-    <div class="banner-carousel-item" style = "background-image: url({% static 'images/Direction2.png' %});">
+    <div class="banner-carousel-item" style = "background-image: url({% static 'images/Direction2.png' %})">
       <div class="slider-content text-right">
           <div class="container h-100">
             <div class="row align-items-center h-100">
@@ -713,28 +713,26 @@
   </section>
   <!--/ PROJETS RÉCENTS end -->
 
-  <!-- offres d'emploi-->
+  <!-- OFFRE D'EMPLOI -->
   <section id="id-offres-emploi" class="content">
     <div class="container ">
       <div class="row">
           <div class="col-lg-12 mt-5 mt-lg-0">
-  
           <h3 class="column-title text-center">offres d'emploi </h3>
-          <p class="card-text text-center">Date du 01/01/2022 au 15/01/2022</p>
+          
           <div class="row">
           {% for offreEmploi in OffresEmplois %}
             {% if offreEmploi.afficher %}  
-            
-                <div class="col-sm-6">
+              <div class="col-sm-6">
+                  <p class="card-text text-center">Date du {{ offreEmploi.date_début }} au {{ offreEmploi.date_fin }}</p>
                   <div class="card">
                     <div class="card-body">
-                      <h5 class="card-title">{{ offreEmploi.libellé }} {{ offreEmploi.nombre_poste }} Poste(s) </h5>
+                      <!-- <h5 class="card-title">{{ offreEmploi.libellé }} {{ offreEmploi.nombre_poste }} Poste(s) </h5> -->
                       <p class="card-text">{{ offreEmploi.description }} </p>
                       <a href="#" class="btn btn-primary">Détails</a>
                     </div>
-                  </div>
                 </div>
-             
+              </div>           
             {% endif %}
           {% endfor %}
 
@@ -744,7 +742,7 @@
     </div>
     <!--/ Container end -->
   </section>
-  <!-- / offres d'emploi end -->
+  <!-- / OFFRE D'EMPLOI end -->
 
   <!-- Footer-->
   <footer id="footer" class="footer bg-overlay">

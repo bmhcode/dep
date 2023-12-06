@@ -124,12 +124,11 @@ class ProjetImages(models.Model):
     #     verbose_plurial_name = "Images du projet"
 
 class OffreEmploi(models.Model):
-    libellé     = models.CharField("Libellé du projet", max_length=100, blank=False, null=False )
-    nombre_poste= models.PositiveIntegerField(default=1, blank=True, null=True )
+    #libellé     = models.CharField("Libellé du projet", max_length=100, blank=False, null=False )
     description = models.TextField(blank=True, null=True )
     date_début  = models.DateField(blank=True, null=True )
     date_fin    = models.DateField(blank=True, null=True )
     afficher    = models.BooleanField(default=False)
 
-    def __str__(self):
-        return self.libellé
+    # def __str__(self):
+    #     return self.libellé
