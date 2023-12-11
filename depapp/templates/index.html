@@ -103,7 +103,6 @@
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Appels d'offres <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
                             <li><a href="#appels-offres">Appels d'offres</a></li>
-                            <li><a href="404.html">Consultations</a></li>
                             <li class="dropdown-submenu">
                                 <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Autres</a>
                                 <ul class="dropdown-menu">
@@ -119,11 +118,8 @@
                       <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ETP & BET <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
-
                             <li><a href="#etp-bet">Entreprises</a></li>
-                            <li><a href="#etp-bet">Buraux d'Etudes</a></li>
-                            <li><a href="news-single.html">Autres</a></li>
-                            
+                            <li><a href="#etp-bet">Buraux d'Etudes</a></li>                           
                           </ul>
                       </li>
                       <li class="nav-item"><a class="nav-link" href="#id-offres-emploi">Offres d'emploi</a></li>
@@ -368,8 +364,8 @@
         <h2 >Appels d'offres</h2>
     </div>
   </section>
-<br>
-    <div class="container">
+  <br>
+  <div class="container">
       <div class="row">
         {% for appelsOffre in appelsOffres %}
           {% if appelsOffre.afficher %}
@@ -387,7 +383,7 @@
         {% endfor %}
 
     </div>
-    </div>
+  </div>
     
   <!-- / Appels offres-->
   
@@ -514,10 +510,10 @@
       </div><!--/ Container end -->
       
     </section>
-<!-- / Secteurs-->
-<!-- / PROGRAMME DES EQUIPEMENTS PUBLICS-->
+  <!-- / Secteurs-->
+  <!-- / PROGRAMME DES EQUIPEMENTS PUBLICS-->
 
-<!-- PROJETS ACHEVES-->
+  <!-- PROJETS ACHEVES-->
     <section id="id-projets-achevés" class="project-area solid-bg">
       <div class="container">
         <div class="row text-center">
@@ -527,22 +523,21 @@
           </div>
         </div>
         <!--/ Title row end -->
-    
         <div class="row">
           <div class="col-12">
             <div class="shuffle-btn-group">
               <label class="" for="all">
-                <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Tous
+                <a href="{% url 'index' %}" id="all" value="all"> Tous </a>
               </label>
+
               {% for secteur in secteursActivités %}
                 <!-- <label for="{{ secteur.name }}"> -->
                   <button type="button" class="btn btn-outline-warning">
-                    <a href="{{ secteur.name }}" id="{{ secteur.name }}" value="{{ secteur.name }}"> 
-                        {{ secteur.name }}
-                    </a> 
+                    <a href="{% url 'index' %}?secteur={{secteur.name}}" id="{{ secteur.name }}" value="{{ secteur.name }}"> {{ secteur.name }} </a>
                   </button>
                 <!-- </label> -->
               {% endfor %}
+
             </div><!-- project filter end -->
             <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for projet in projets %}
@@ -574,52 +569,26 @@
     </section>
   <!-- / PROJETS ACHEVES-->
 
-  <!-- Entreprises et BET-->
-  <section id="etp-bet" class="content">
+  <!-- BET-->
+  <section id="bet" class="content">
   <div class="container text-center">
     <div class="row">
         <div class="col-lg-12 mt-5 mt-lg-0">
-
-          <h3 class="column-title">Entreprises et BET </h3>
-
+          <h3 class="column-title"> BET </h3>
           <div class="row all-clients">
+            {% for bet in bets %}
               <div class="col-sm-4 col-6">
                 <figure class="clients-logo">
+                  {% if bet.logo %}
+                    <a href="#!"><img loading="lazy" class="img-fluid" src="{{ bet.logo.url }}" alt="BET" /></a>
+                  {% else %}
                     <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client1.png' %}" alt="clients-1" /></a>
+                  {% endif %}
                 </figure>
-              </div><!-- Client 1 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client2.png' %}" alt="clients-2" /></a>
-                </figure>
-              </div><!-- Client 2 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client3.png' %}" alt="clients-3" /></a>
-                </figure>
-              </div><!-- Client 3 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client4.png' %}" alt="clients-4" /></a>
-                </figure>
-              </div><!-- Client 4 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client5.png' %}" alt="clients-5" /></a>
-                </figure>
-              </div><!-- Client 5 end -->
-
-              <div class="col-sm-4 col-6">
-                <figure class="clients-logo">
-                    <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client6.png' %}" alt="clients-6" /></a>
-                </figure>
-              </div><!-- Client 6 end -->
-
-          </div><!-- Clients row end -->
+              </div>
+            {% endfor %}
+            
+          </div><!-- Bet row end -->
 
         </div><!-- Col end -->
     </div>
@@ -627,7 +596,36 @@
   </div>
   <!--/ Container end -->
   </section>
-  <!-- / Entreprises et BET end -->
+  <!-- / BET end -->
+
+  <!-- Entreprises -->
+  <section id="etp" class="content">
+    <div class="container text-center">
+      <div class="row">
+          <div class="col-lg-12 mt-5 mt-lg-0">
+            <h3 class="column-title">Entreprises</h3>
+            <div class="row all-clients">
+              {% for etp in etps %}
+                <div class="col-sm-4 col-6">
+                  <figure class="clients-logo">
+                    {% if etp.logo %}
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="{{ etp.logo.url }}" alt="BET" /></a>
+                    {% else %}
+                      <a href="#!"><img loading="lazy" class="img-fluid" src="{% static 'images/clients/client1.png' %}" alt="clients-1" /></a>
+                    {% endif %}
+                  </figure>
+                </div>
+              {% endfor %}
+              
+            </div><!-- Etpreprises row end -->
+  
+          </div><!-- Col end -->
+      </div>
+      <!--/ Content row end -->
+    </div>
+    <!--/ Container end -->
+  </section>
+  <!-- / Entreprises end -->
 
   <!-- subscribe -->
   <section class="subscribe no-padding">
@@ -831,8 +829,6 @@
   </footer>
   <!-- Footer end -->
 
-
-
 <!-- Javascript Files
   ================================================== -->
 
@@ -853,7 +849,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
   <!-- Google Map Plugin-->
   <script src="{% static 'plugins/google-map/map.js' %}" defer></script>
-
   <!-- Template custom -->
   <script src="{% static 'js/script.js' %}"></script>
 

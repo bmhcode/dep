@@ -58,6 +58,7 @@ class AppelsOffre(models.Model):
     date_début = models.DateField(blank=True, null=True )
     date_fin = models.DateField(blank=True, null=True )
     afficher = models.BooleanField(default=False)
+
     def __str__(self):
         return self.type
 
@@ -69,7 +70,7 @@ class Entreprise(models.Model):
     contact   = models.CharField(max_length = 50, blank=True, null=True )
     mobile    = models.CharField(max_length = 30,blank=True, null=True )
     observation = models.TextField(blank=True, null=True )
-    active = models.BooleanField(default=False)
+    afficher = models.BooleanField(default=False)
 
 class Bet(models.Model):
     name      = models.CharField(max_length=100) 
@@ -79,14 +80,15 @@ class Bet(models.Model):
     contact   = models.CharField(max_length=50, blank=True, null=True )
     mobile    = models.CharField(max_length=30,blank=True, null=True )
     observation = models.TextField(blank=True, null=True )
-    active = models.BooleanField(default=False)
+    afficher = models.BooleanField(default=False)
+
 
 
 class SecteurActivité(models.Model):
-    name = models.CharField(max_length=100)
+    name  = models.CharField(max_length=100)
     image = models.ImageField(upload_to="Secteurs d'activité/", blank=True, null=False)
-    nombreProjets = models.PositiveIntegerField(default=0, blank=True, null=True )
-    afficher = models.BooleanField(default=True)
+    nombreProjets  = models.PositiveIntegerField(default=0, blank=True, null=True )
+    afficher       = models.BooleanField(default=True)
     afficherDroite = models.BooleanField(default=False)
 
     def __str__(self):
@@ -99,24 +101,23 @@ class Projet(models.Model):
         ('Achevé','Achevé'),
     )
 
-    libellé   = models.CharField("Libellé du projet", max_length=100, blank=False, null=False )
+    libellé = models.CharField("Libellé du projet", max_length=100, blank=False, null=False )
     état    = models.CharField("Etat du projet", max_length=20, choices = ETAT_PROJET , default='Récent')
     secteur = models.ForeignKey(SecteurActivité,related_name="Secteurs",on_delete=models.CASCADE, verbose_name="Secteur d'activité")
     image   = models.ImageField(upload_to='Projets/', blank=True, null=False)
     description = models.TextField(blank=True, null=True )
     date_début_traveaux = models.DateField(blank=True, null=True )
-    date_fin_traveaux = models.DateField(blank=True, null=True )
-
-    afficher    = models.BooleanField(default=False)
+    date_fin_traveaux   = models.DateField(blank=True, null=True )
+    afficher            = models.BooleanField(default=False)
 
     def __str__(self):
         return self.libellé
 
 class ProjetImages(models.Model):
     projet = models.ForeignKey(Projet,related_name="Images",on_delete=models.CASCADE)
-    image= models.ImageField(upload_to='Projets/Images/', blank=True, null=False)
+    image  = models.ImageField(upload_to='Projets/Images/', blank=True, null=False)
     description = models.TextField(blank=True, null=True )
-    afficher = models.BooleanField(default=True)
+    afficher    = models.BooleanField(default=True)
 
     # def __str__(self):
     #     return self.name
